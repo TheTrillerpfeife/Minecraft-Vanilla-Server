@@ -16,10 +16,11 @@ public class MinecraftServerWrapperApplication {
         while (true) ;
     }
 
+    //TODO install sleep-most plugin
+
     public static void startMinecraft() {
         ProcessBuilder builder = new ProcessBuilder("java", "-Xms1G", "-Xmx3G", "-jar", "paper.jar", "--nogui");
         builder.directory(new File(System.getProperty("user.home") + "/Minecraft"));
-        builder.redirectOutput(new File("out.txt"));
         try {
             Process process = builder.start();
         } catch (Exception e) {
