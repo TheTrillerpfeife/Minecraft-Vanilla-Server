@@ -8,7 +8,7 @@
       "files": {
         "collect_list": [
           {
-            "file_path": "/home/ec2-user/logs/latest.log",
+            "file_path": "/home/ec2-user/Minecraft/logs/latest.log",
             "log_group_name": "minecraft-paper-server-logs",
             "log_stream_name": "{instance_id}",
             "retention_in_days": 60
