@@ -19,7 +19,7 @@
 
 	<groupId>de.ben-josua</groupId>
 	<artifactId>Minecraft-Server-Wrapper</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>Minecraft-Server-Wrapper</name>
 	<description>Minecraft-Server-Wrapper</description>
 
