@@ -13,7 +13,6 @@ public class MinecraftServerWrapperApplication {
         SpringApplication.run(MinecraftServerWrapperApplication.class, args);
         startCloudWatch();
         startMinecraft();
-       //while (true);
     }
 
     //TODO install sleep-most plugin
@@ -29,8 +28,7 @@ public class MinecraftServerWrapperApplication {
     }
 
     public static void startCloudWatch() {
-        //System.out.println(this.getClass().getResource("cloud-watch-config.json").getFile());
-        ProcessBuilder builder = new ProcessBuilder("sudo", "/opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl", "-a", "fetch-config", "-m", "ec2", "-s", "-c", "file:" + MinecraftServerWrapperApplication.class.getClassLoader().getResource("cloud-watch-config.json").getPath());
+        ProcessBuilder builder = new ProcessBuilder("sudo", "/opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl", "-a", "fetch-config", "-m", "ec2", "-s", "-c", "file:" + System.getProperty("user.home") + "/cloud-watch-config.json");
         try {
             Process process = builder.start();
         } catch (Exception e) {
