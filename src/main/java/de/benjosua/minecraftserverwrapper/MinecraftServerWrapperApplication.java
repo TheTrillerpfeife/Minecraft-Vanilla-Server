@@ -13,6 +13,7 @@ public class MinecraftServerWrapperApplication {
         SpringApplication.run(MinecraftServerWrapperApplication.class, args);
         startCloudWatch();
         startMinecraft();
+        while (true);
     }
 
     //TODO install sleep-most plugin
